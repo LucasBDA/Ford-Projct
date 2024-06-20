@@ -1,0 +1,44 @@
+<!-- vehicle_specification file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes Adicionais da Solicitação</title>
+</head>
+<body>
+    <h1>Detalhes Adicionais da Solicitação</h1>
+    <form action="/submit_page4" method="post">
+        <label for="vehicle_model">Modelo do Veículo:</label><br>
+        <input type="text" id="vehicle_model" name="vehicle_model" required title="Por favor, informe o modelo exato do veículo."><br>
+
+        <label for="vehicle_year">Ano do Veículo:</label><br>
+        <input type="text" id="vehicle_year" name="vehicle_year" required pattern="\d{4}" title="Informe o ano do veículo em formato AAAA."><br>
+
+        <label for="vehicle_type">Tipo de Veículo:</label><br>
+        <select id="vehicle_type" name="vehicle_type" required title="Selecione o tipo de veículo da lista.">
+            <option value="Sedan">Sedan</option>
+            <option value="SUV">SUV</option>
+            <option value="Caminhao">Caminhão</option>
+            <!-- Adicione mais opções conforme necessário -->
+        </select><br>
+
+        <p>Características Especiais:</p>
+        <input type="checkbox" id="electric" name="special_features" value="Elétrico" title="Marque se o veículo for elétrico.">
+        <label for="electric">Elétrico</label><br>
+        <input type="checkbox" id="hybrid" name="special_features" value="Híbrido" title="Marque se o veículo for híbrido.">
+        <label for="hybrid">Híbrido</label><br>
+        <label for="vehicle_model">Modelo do Veículo:</label>
+        <span class="info">(Por exemplo, Toyota Corolla)</span><br>
+        <input type="text" id="vehicle_model" name="vehicle_model" required><br>
+        <input type="submit" value="Próxima pagina">
+        <style>
+        .info {
+            font-size: 0.8em;
+            color: #666;
+        }
+        </style>
+                
+</body>
+</html>
+
+  

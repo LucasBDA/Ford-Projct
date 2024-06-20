@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="static/car.png">
+    <title>AVD Request Page</title>
+    <link rel="stylesheet" href="static/form_style.css">
+</head>
+<body>
+    <div class = "logo-div">
+        <ul class = "logo">
+            <li><img id = "ford-logo" src = "/static/ford-logo.png"></li>
+            <li><h1 id = "title">AVD Request Page</h1></li>
+        </ul>
+        <!---->
+    </div><!--
+    <div id = "white-line"></div>
+    <div id = "blue-line"></div>-->
+    <div class = "page">
+        <div id = "page-content">
+            <ul id = "Items">
+                <li id = "User-Authentication" class = "dropdown-header">
+                    <h2 id = "authentication" class = "subtitles">
+                        <span class = "left-icon">-</span>
+                        <span class = "right-icon">-</span>
+                        Authentication
+                    </h2>
+                    <div id = "authentication_div" class = "dropdown-content">
+                            <div id = "blank-space"></div>
+                            <ul id = "userIntel" class = "cascate-list">
+                                <li id = "name">
+                                    <p class = "userIntel-p">Name</p><input type = "text" placeholder="Type your full name." name = "full-name">
+                                </li>
+                                <li id = "cdsid">
+                                    <p class = "userIntel-p">CDSID</p><input type = "text" placeholder="Type your CDSID." name = "cdsid">
+                                </li>
+                                <li id = "request">
+                                    <p class = "userIntel-p">Request Name</p><input type = "text" placeholder="Type the request name." name = "request_name">
+                                </li>
+                           <!--     <li class = "done-class-li">
+                                    <input id = "done-1" class = "done" type = "checkbox" name = "done-checklist">
+                                    <label id = "teste" class = "done-text" for = "done-checklist">Check it when you're done!</label>
+                                </li>-->
+                            </ul>
+                            <div id = "blank-space"></div>
+                    </div>
+                </li>
+                <li id = "Request-Clarification" class = "dropdown-header">
+                    <h2 id = "request-clarification" class = "subtitles">
+                        <span class = "left-icon">-</span>
+                        <span class = "right-icon">-</span>
+                        Request Clarification
+                    </h2>
+                    <div id = "request-clarification_div" class = "dropdown-content">
+                        <ul class = "cascate-list" id = "requestClarification">
+                            <li>
+                                <h3>Request Type</h3>
+                                <select id = "request-type" name = "request-type">
+                                <option value = "">Select one</option>
+                                <option value = "opt2">New</option>
+                                <option value = "opt3">Extension</option>
+                                <option value = "opt4">Repeat</option>
+                                </select>
+                            </li>
+                            <li>
+                                <h3>Request Category</h3>
+                                <select id = "request-category" name = "request-category">
+                                <option value = "">Select one</option>
+                                <option value = "opt2">Product/Service Improvement</option>
+                                <option value = "opt3">Product/Service Performance Analysis</option>
+                                <option value = "opt4">Product/Service Use Analysis</option>
+                                <option value = "opt5">Product/Service Troubleshooting</option>
+                                <option value = "opt6">Vehicle Safety</option>
+                                <option value = "opt7">Vehicle Security</option>
+                                <option value = "opt9">Legal Compliance</option>
+                                <option value = "opt10">Product or Service Creation/Development</option>
+                                <option value = "opt11">Warranty Claim Management</option>
+                                <option value = "opt12">Service Delivery Based on Sensitive Data</option>
+                                <option value = "opt13">Service Delivery NOT Based Sensitive Data</option>
+                                <option value = "opt14">Consumer Profiling</option>
+                                <option value = "opt15">Transaction-based Communication</option>
+                                <option value = "opt16">Predictive Modelling-based Communication</option>
+                                </select>
+                            </li>
+                            <li id = "prod-type-list">
+                                <h3>Production Type</h3>
+                                <select id = "production-type" name = "production-type">
+                                <option value = "">Select one</option>
+                                <option value = "opt2">Pre-Prod</option>
+                                <option value = "opt3">Prod</option>
+                                <option value = "opt4">DCV</option>
+                                <option value = "opt5">MLV</option>
+                                </select>
+                            </li>
+                            <li id = "team-name-list">
+                                <h3 id = "team-name-h3">Team Name</h3>
+                                <textarea id = "team-name" class = "big-text-areas" type = "text" placeholder="Enter your Team Name. If data shared via tables, all members in the team will have access to the data. If individual request specify N/A." name = "team-name"></textarea>
+                            </li>
+                            <li>
+                                <h3 id = "requestor-name-h3">Number of requestors</h3>
+                                <input id = "requestor-number" type = "number" placeholder="0" name = "requestor-number">
+                            <li id = "popup">
+                                <p>There can only be up to 3 Requestors!</p>
+                            </li>
+                            <li id = "privacy-training-li">
+                                <h3>Privacy Training</h3>
+                                <select id = "privacy-training-select" name = "privacy-training-select">
+                                <option value = "">Select one</option>
+                                <option value = "opt2">Yes</option>
+                                <option value = "opt3">No</option><!--
+                                <input type = "checkbox" class = "checkbox-input-1" id = "privacy-training-yes" name = "privacy-training-yes">
+                                <label for="privacy-training-yes">Yes</label><br>
+                                <input type = "checkbox" class = "checkbox-input-1" id = "privacy-training-no" name = "privacy-training-no">
+                                <label for="privacy-training-no">No</label><br>-->
+                                </select>
+                            </li>
+                            <li>
+                                <h3>GDPR Training</h3>
+                                <select id = "gdpr-training-select" name = "gdpr-training-select">
+                                <option value = "">Select one</option>
+                                <option value = "opt2">Yes</option>
+                                <option value = "opt3">No</option><!--
+                                <input type = "checkbox" class = "checkbox-input-2" id = "gdrp-training-yes" name = "gdrp-training-yes">
+                                <label for="gdrp-training-yes">Yes</label><br>
+                                <input type = "checkbox" class = "checkbox-input-2" id = "gdrp-training-no" name = "gdrp-training-no">
+                                <label for="gdrp-training-no">No</label><br>
+                                -->
+                                </select>
+                            </li>
+                            <li>
+                                <h3>Ford Internal use</h3>
+                                <select id = "ford-internal-use-select" name = "ford-internal-use-select">
+                                <option value = "">Select one</option>
+                                <option value = "opt2">Yes</option>
+                                <option value = "opt3">No</option><!--
+                                <input type = "checkbox" class = "checkbox-input-3" id = "ford-internal-use-yes" name = "ford-internal-use-yes">
+                                <label for="ford-internal-use-yes">Yes</label><br>
+                                <input type = "checkbox" class = "checkbox-input-3" id = "ford-internal-use-no" name = "ford-internal-use-no">
+                                <label for="ford-internal-use-no">No</label><br>
+                                    -->
+                                </select>
+                            </li>
+                            <li>
+                                <h2>Location</h2>
+                            </li>
+                            <li>
+                                <h3 id = "region-population-h3">Region of Population</h3>
+                                <textarea  id = "region-population" class = "big-text-areas" type = "text" placeholder = "Enter the region from where the data is collected from." name = "region-population"></textarea>            
+                            </li>
+                            <li>
+                                <h3 id = "region-data-h3">Region where data will be used</h3>
+                                <textarea  id = "region-data" class = "big-text-areas" type = "text" placeholder = "Enter the region where the data collected will be used." name = "region-data"></textarea>
+                            </li>
+                            <li>
+                                <h3 id = "purpose-h3">Purpose of Data collection</h3>
+                                <textarea  id = "purpose" class = "big-text-areas" type = "text" placeholder="Enter the purpose of the data collection in this request." name = "purpose"></textarea>
+                            </li>
+                            <!--
+                            <li class = "done-class-li">
+                                <input id = "done-2" class = "done" type = "checkbox" name = "done-checklist">
+                                <label class = "done-text" for = "done-checklist">Check it when you're done!</label>
+                            </li>-->
+                            <div id = "blank-space"></div>
+                        </ul>
+                    </div>
+                </li>
+                <li id = "Vehicle-Specification" class = "dropdown-header">
+                    <h2 id = "vehicle-specification" class = "subtitles">
+                        <span class = "left-icon">-</span>
+                        <span class = "right-icon">-</span>
+                        Vehicle Specification
+                    </h2>
+                    <div id = "vehicle-specification_div" class = "dropdown-content">
+                        <ul class = "cascate-list"  id = "vehicleSpecification">
+                            <li>
+                                <li>
+                                    <h3>VIN</h3>
+                                    <input type = "checkbox" id = "vin-yes" name = "vin-yes">
+                                    <label for="vin-yes">Yes</label><br>
+                                    <input type = "checkbox" id = "vin-no" name = "vin-no">
+                                    <label for="vin-no">No</label><br>
+                                </li>
+                                <li id = "vin-list-li">
+                                    <h3>VIN List</h3>
+                                    <select id = "vin-list" name = "vin-list">
+                                        <option value = "opt">Select one</option>
+                                        <option value = "opt2">Provided by the requestor</option>
+                                        <option value = "opt3">Operations team to collect VINs</option>
+                                    </select>
+                                </li>
+                                <li id = "tags" class = "vin-numbers">
+                                    <h3>VIN Numbers</h3>
+                                    <input type = "text" id = "tags-input" placeholder="Type the VIN Number and press 'ENTER'">
+                                </li>
+                                <li id = "fleet-vehicle-li">
+                                    <h3>Fleet Vehicle</h3>
+                                    <p>Are there any fleet vehicles in the VIN list provided?</p>
+                                    <input type = "checkbox" id = "fleet-vehicle-yes" name = "fleet-vehicle-yes">
+                                    <label for="vin-yes">Yes</label><br>
+                                    <input type = "checkbox" id = "fleet-vehicle-no" name = "fleet-vehicle-no">
+                                    <label for="vin-no">No</label><br>
+                                </li>
+                                <li id = "vehicle-number-li">
+                                    <h3 id = "vehicle-number-h3">Number of vehicles</h3>
+                                    <input id = "vehicle-number" type = "number" placeholder="0" name = "vehicle-number">
+                                    <div id = "vehicle-container"></div>
+                                </li>        
+                                <li id = "feature-codes-li">
+                                    <h3>Feature Codes</h3>
+                                    <input type = "checkbox" id = "feature-codes-yes" name = "privacy-training-yes">
+                                    <label for="privacy-training-yes">Yes</label><br>
+                                    <input type = "checkbox" id = "feature-codes-no" name = "privacy-training-no">
+                                    <label for="privacy-training-no">No</label><br>
+                                </li>
+                                <div id = "blank-space"></div>
+                                <!--
+                                <li class = "done-class-li">
+                                    <input id = "done-3" class = "done" type = "checkbox" name = "done-checklist">
+                                    <label class = "done-text" for = "done-checklist">Check it when you're done!</label>
+                                </li>-->
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li id = "Data-Requirements" class = "dropdown-header">
+                    <h2 id = "data-requirements" class = "subtitles">
+                        <span class = "left-icon">-</span>
+                        <span class = "right-icon">-</span>
+                        Data Requirements
+                    </h2>
+                    <div id = "data-requirements_div" class = "dropdown-content">
+                        <ul class = "cascate-list"  id = "dataRequirements">
+                            <li id="data-to-collect">
+                                <h3>Data to be Collected</h3>
+                                <p>Select which part of the data you are planning on collecting as part of your request.</p>
+                                <ul>
+                                    <li>
+                                        <input type = "checkbox" name = "did">
+                                        <label for="did">DIDs/PIDs</label><br>
+                                    </li>
+                                    
+                                    <li>
+                                        <input type = "checkbox" name = "can">
+                                        <label for="can">CAN Signals</label><br>
+                                    </li>
+                                    
+                                    <li>
+                                        <input type = "checkbox" name = "dtcs">
+                                        <label for="dtcs">DTC-Snapshot</label><br>
+                                    </li>
+                                    
+                                    <li>
+                                        <input type = "checkbox" name = "dtcf">
+                                        <label for="dtcf">DTC-Freezaframe</label><br>
+                                    </li>
+                                    
+                                    <li>
+                                        <input type = "checkbox" name = "parsed">
+                                        <label for="parsed">Parsed Channels</label><br>
+                                    </li>
+                                    
+                                    <li>
+                                        <input type = "checkbox" name = "dmr">
+                                        <label for="dmr">DMR</label><br>
+                                    </li>
+                                </ul>                                
+                            </li>
+                            <li id="additional-data-to-collect">
+                                <h3>Additional Output Data</h3>
+                                <p>Check the additional data that needs to be collected.</p>
+
+                                <ul id = "data-ul">
+                                    <li>
+                                        <p class = "data-subtitle">Identifiers</p>
+                                    </li>
+                                    <li>
+                                        <input type = "checkbox" name = "vin">
+                                        <label for="vin">VIN</label><br>
+                                    </li>
+                                    
+                                    <li>
+                                        <input type = "checkbox" name = "esn">
+                                        <label for="esn">ESN</label><br>
+                                    </li>
+                                    
+                                    <li>
+                                        <input id = "identifiers-reason" type = "text" placeholder="Reason for identifiers. Precise GPS.">
+                                    </li>
+    
+                                    <li>
+                                        <p class = "data-subtitle">Others</p>
+                                    </li>
+    
+                                    <li>
+                                        <input type = "checkbox" name = "odometer">
+                                        <label for="odometer">Odometer (Pre FNV2 Only)</label><br>
+                                    </li>
+                                    
+                                    <li>
+                                        <input type = "checkbox" name = "truncated-gps">
+                                        <label for="truncated-gps">Truncated GPS</label><br>
+                                    </li>
+    
+                                    <li>
+                                        <input type = "checkbox" name = "precise-gps">
+                                        <label for="precise-gps">Precise GPS (Needs OGC Approval)</label><br>
+                                    </li>
+                                    
+                                    <li>
+                                        <input type = "checkbox" name = "transmission">
+                                        <label for="transmission">Transmission</label><br>
+                                    </li>
+    
+                                    <li>
+                                        <input type = "checkbox" name = "sold-state">
+                                        <label for="sold-state">Sold State (or Country for EU)</label><br>
+                                    </li>
+                                    
+                                    <li>
+                                        <input type = "text" name = "others" placeholder = "Specify others if that's the case (it includes 'Emission', 'Cabstyle', 'Vehicleseries', etc.).">
+                                    </li>                                
+                                </ul>
+                            <li id = "triggers">
+                                <h3>CARMon / VHA Triggers</h3>
+                                <ul>
+                                    <li id = "triggers-number-li">
+                                        <p class = "data-subtitle">Trigger</p>
+                                        <input id = "a" class = "triggers-number" type = "checkbox" name = "triggerCAN">
+                                        <label for = "triggerCAN">CAN</label><br>
+
+                                        <input id = "b" class = "triggers-number" type = "checkbox" name = "triggerDID">
+                                        <label for = "triggerDID">DID</label><br>
+
+                                        <div class = "triggerCAN-div">
+                                            <ul>
+                                                <li>
+                                                    <textarea  class = "big-text-areas" type = "text" placeholder = "Type all the data necessary using CAN information. (E.g.: Signal Name, Comparator, Value)." name = "region-data"></textarea>
+                                                </li>
+                                                <!--
+                                                <li>
+                                                    <select class = "comparator-id" name = "comparator">
+                                                        <option value = "">Select Logic</option>
+                                                        <option value = "opt2">AND</option>
+                                                        <option value = "opt3">OR</option>
+                                                    </select>
+                                                </li>
+                                                -->
+                                            </ul>
+                                        </div>
+                                        <div class = "triggerDID-div">
+                                            <ul>
+                                                <li>
+                                                    <textarea  class = "big-text-areas" type = "text" placeholder = "Type all the data necessary using DID information. (E.g.: DID, Module, Parameter, Comparator, Value, Start-Byte, Start-Bit and Size (bits))." name = "region-data"></textarea>
+                                                </li>
+                                                <!--
+                                                <li>
+                                                    <select id = "comparator-id" name = "comparator">
+                                                        <option value = "">Select Comparator</option>
+                                                        <option value = "opt2">AND</option>
+                                                        <option value = "opt3">OR</option>
+                                                    </select>
+                                                </li>
+                                                -->
+                                            </ul>
+                                        </div>
+                                        <p id = "advice">Use the buttons below to add new Triggers.</p>
+                                        <ul id = "triggers-buttons">
+                                            <li>
+                                                <h2 id = "trigger-button-add">+</h2>
+                                            </li>
+                                            <li>
+                                                <h2 id = "trigger-button-remove">-</h2>
+                                            </li>
+                                        </ul>                                      
+                                    </li>
+                                </ul>
+                            </li><!--
+                            <li class = "done-class-li">
+                                <input id = "done-4" class = "done" type = "checkbox" name = "done-checklist">
+                                <label class = "done-text" for = "done-checklist">Check it when you're done!</label>
+                            </li>-->
+                        </ul>
+                    </div>
+                <li>
+                <li id = "Data-Delivery" class = "dropdown-header">
+                    <h2 id = "data-delivery" class = "subtitles">
+                        <span class = "left-icon">-</span>
+                        <span class = "right-icon">-</span>
+                        Data Delivery and Timings
+                    </h2>
+                    <div id = "data-delivery_div" class = "dropdown-content">
+                        <ul class = "cascate-list"  id = "dataDelivery">
+                            <li>
+                                <h3>Duration</h3>
+                                <p>Enter the duration the data has to be collected.</p>
+                                <input type="text" name = "data-delivery-duration" placeholder="Number of days, weeks or months (maximum of 6 months).">
+                            </li>
+                            <li>
+                                <h3>Frequency of Deployment/Collection</h3>
+                                <p>Enter how frequently the data needs to be collected.</p>
+                                <input type="text" name = "data-delivery-frequency" placeholder="One time, once daily, once weekly, once monthly or based on Trigger.">
+                            </li>
+                            <li>
+                                <h3>Frequency of Delivery</h3>
+                                <p>Enter how frequently the data will be delivered to requesters.</p>
+                                <input type="text" name = "data-delivery-delivery" placeholder="Once, daily (needs LL4 Approval), weekly (needs LL5 approval), twice a week, monthly, etc.">
+                            </li>
+                            <li id = "gcp-li">
+                                <h3>GCP</h3>
+                                <p>Please confirm if your team has a GCP project.</p>
+                                <input type = "checkbox" class = "checkbox-input-1" id = "gcp-yes" name = "gcp-yes">
+                                <label for="gcp-yes">Yes</label><br>
+                                <input type = "checkbox" class = "checkbox-input-1" id = "gcp-no" name = "gcp-no">
+                                <label for="gcp-no">No</label><br>
+                                <a href="https://docs.gcp.ford.com/docs/onboard/getting-started/">If your team doesn't have a GCP project, click here!</a>
+                            </li><!--
+                            <li class = "done-class-li">
+                                <input id = "done-5" class = "done" type = "checkbox" name = "done-checklist">
+                                <label class = "done-text" for = "done-checklist">Check it when you're done!</label>
+                            </li>-->
+                        </ul>
+                    </div>
+                <li>
+                    <input id = "submit" type = "submit" value = "SUBMIT REQUEST">
+                </li>
+                <li id = "ford-warning-li">
+                    <img id = "ford-warning" src = "/static/warning.png">
+                </li>
+                <li id = "page-footer">
+                    <p>
+                        This new web application has been made for the AVD Request Checklist (xlsx) replacement.
+                        <br>Please visit AVD/ADC service desk and raise a JIRA ticket through the link below for any concerns/queries/changes to existing requests.</br>
+                    </p>
+                    <a href="https://ford.atlassian.net/servicedesk/customer/portal/64">Access Service Desk</a>
+                </li>
+                <li id = "Ford-Bottom-Image">
+                    <img id = "ford-img" src = "">
+                </li>
+            </ul>
+        </div>
+    </div><!--
+    <footer id = "pseudo-footer">
+        <div></div>
+        <p>
+            This new web application has been made for the AVD Request Checklist (xlsx) replacement.
+            <br>Please visit AVD/ADC service desk and raise a JIRA ticket through the link below for any concerns/queries/changes to existing requests.</br>
+        </p>
+        <a href="https://ford.atlassian.net/servicedesk/customer/portal/64">Access Service Desk</a>
+    </footer>-->
+    <script src = "static/page_control.js"></script>
+    <script src = "static/pageFulfillment.js"></script>
+</body>
+</html>

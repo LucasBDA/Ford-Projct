@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/request_style.css">
+  <title>AVD Request Page</title>
+</head>
+<body>
+  <div class = "main">
+    <div class = "header-content">
+      <div class = "title">
+        <ul>
+          <li><img id = "image" src = "static/ford_logo.jpg"></li>
+          <li><h1>AVD Request Page</h1></li>
+        </ul>
+      </div>
+      <div class = "subtitle">
+        <h1>Request Clarification Form</h1>
+      </div>
+      <div class = "user-informations">
+        <ul>
+          <li>
+            <p class = "identifier">Name:</p>
+          </li>
+          <li>
+            <p class = "data">{{nome}}</p>
+          </li>
+          <li>
+            <p class = "identifier">CDSID:</p>
+          </li>
+          <li>
+            <p class = "data">{{cdsid}}</p>
+          </li>
+          <li>
+            <p class = "identifier">Request Name:</p>
+          </li>
+          <li>
+            <p class = "data">{{request}}</p>
+          </li>
+        </ul>      
+      </div>
+    </div>
+    <div class = "main-content">
+      <div class = "drop-down">
+        <form action="/vehicle-specification" method = "post">
+          <ul>
+            <li>
+              <img id = "ford-logo-img" src = "/static/ford_logo_3.png">
+            </li>
+            <li>
+              <h3>Request Type</h3>
+              <select id = "request-type" name = "request-type">
+                <option value = "">Select one</option>
+                <option value = "opt2">New</option>
+                <option value = "opt3">Extension</option>
+                <option value = "opt4">Repeat</option>
+              </select>
+            </li>
+            <li>
+              <h3>Request Category</h3>
+              <select id = "request-category" name = "request-category">
+                <option value = "">Select one</option>
+                <option value = "opt2">Product/Service Improvement</option>
+                <option value = "opt3">Product/Service Performance Analysis</option>
+                <option value = "opt4">Product/Service Use Analysis</option>
+                <option value = "opt5">Product/Service Troubleshooting</option>
+                <option value = "opt6">Vehicle Safety</option>
+                <option value = "opt7">Vehicle Security</option>
+                <option value = "opt9">Legal Compliance</option>
+                <option value = "opt10">Product or Service Creation/Development</option>
+                <option value = "opt11">Warranty Claim Management</option>
+                <option value = "opt12">Service Delivery Based on Sensitive Data</option>
+                <option value = "opt13">Service Delivery NOT Based Sensitive Data</option>
+                <option value = "opt14">Consumer Profiling</option>
+                <option value = "opt15">Transaction-based Communication</option>
+                <option value = "opt16">Predictive Modelling-based Communication</option>
+              </select>
+            </li>
+            <li id = "prod-type-list">
+              <h3>Production Type</h3>
+              <select id = "production-type" name = "production-type">
+                <option value = "">Select one</option>
+                <option value = "opt2">Pre-Prod</option>
+                <option value = "opt3">Prod</option>
+                <option value = "opt4">DCV</option>
+                <option value = "opt5">MLV</option>
+              </select>
+            </li>
+            <li id = "team-name-list">
+              <h3 id = "team-name-h3">Team Name</h3>
+              <input id = "team-name" type = "text" placeholder="Enter your team name. For individual request, please specify." name = "team-name">
+            </li>
+            <li>
+              <h3 id = "requestor-name-h3">Number of requestors</h3>
+              <input id = "requestor-number" type = "number" placeholder="0" name = "requestor-number">
+            <li id = "popup">
+                <p>There can only be up to 3 Requestors!</p>
+            </li>
+            </li>
+            <li id = "privacy-training-li">
+              <h3>Privacy Training</h3>
+              <input type = "checkbox" class = "checkbox-input-1" id = "privacy-training-yes" name = "privacy-training-yes">
+              <label for="privacy-training-yes">Yes</label><br>
+              <input type = "checkbox" class = "checkbox-input-1" id = "privacy-training-no" name = "privacy-training-no">
+              <label for="privacy-training-no">No</label><br>
+              </select>
+            </li>
+            <li>
+              <h3>GDPR Training</h3>
+              <input type = "checkbox" class = "checkbox-input-2" id = "gdrp-training-yes" name = "gdrp-training-yes">
+              <label for="gdrp-training-yes">Yes</label><br>
+              <input type = "checkbox" class = "checkbox-input-2" id = "gdrp-training-no" name = "gdrp-training-no">
+              <label for="gdrp-training-no">No</label><br>
+            </li>
+            <li>
+              <h3>Ford Internal use</h3>
+              <input type = "checkbox" class = "checkbox-input-3" id = "ford-internal-use-yes" name = "ford-internal-use-yes">
+              <label for="ford-internal-use-yes">Yes</label><br>
+              <input type = "checkbox" class = "checkbox-input-3" id = "ford-internal-use-no" name = "ford-internal-use-no">
+              <label for="ford-internal-use-no">No</label><br>
+            </li>
+            <li>
+              <h2>Location</h2>
+            </li>
+            <li>
+              <h3 id = "region-population-h3">Region of Population</h3>
+              <input id = "region-population" type = "text" placeholder = "Enter the region from where the data is collected from." name = "region-population">            
+            </li>
+            <li>
+              <h3 id = "region-data-h3">Region where data will be used</h3>
+              <input id = "region-data" type = "text" placeholder = "Enter the region where the data collected will be used." name = "region-data">
+            </li>
+            <li>
+              <h3 id = "purpose-h3">Purpose of Data collection</h3>
+              <input id = "purpose" type = "text" placeholder="Enter the purpose of the data collection in this request." name = "purpose">
+            </li>
+            <li>
+              <input id = "submit" type = "submit" value = "">
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <div id = "pseudo-footer">
+      <div></div>
+      <p>
+          This new web application has been made for the AVD Request Checklist (xlsx) replacement.
+          <br>Please visit AVD/ADC service desk and raise a JIRA ticket through the link below for any concerns/queries/changes to existing requests.</br>
+      </p>
+      <a href="https://ford.atlassian.net/servicedesk/customer/portal/64">Access Service Desk</a>
+  </div>
+  </div>
+  <script src = "static/page_control.js"></script>
+</body>
+</html>

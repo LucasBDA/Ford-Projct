@@ -1,0 +1,44 @@
+<!-- data_delivery_timing file -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Definição do Cronograma de Entrega</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( "#start_date, #end_date" ).datepicker();
+    } );
+    </script>
+</head>
+<body>
+    <h1>Definição do Cronograma de Entrega</h1>
+    <form action="/submit_page4" method="post">
+        <label for="start_date">Data Inicial:</label><br>
+        <input type="text" id="start_date" name="start_date" required><br>
+
+        <label for="end_date">Data Final:</label><br>
+        <input type="text" id="end_date" name="end_date" required><br>
+        
+        <label for="preferred_time">Horário Preferencial de Entrega:</label><br>
+        <select id="preferred_time" name="preferred_time" required>
+            <option value="Manhã">Manhã</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Noite">Noite</option>
+        </select><br>
+        
+        <p>Dias da Semana:</p>
+        <input type="checkbox" id="monday" name="week_days" value="Segunda-feira">
+        <label for="monday">Segunda-feira</label><br>
+        <!-- Repita para outros dias da semana conforme necessário -->
+
+        <label for="additional_comments">Comentários Adicionais:</label><br>
+        <textarea id="additional_comments" name="additional_comments"></textarea><br>
+        
+        <input type="submit" value="Confirmar Cronograma">
+    </form>
+</body>
+</html>

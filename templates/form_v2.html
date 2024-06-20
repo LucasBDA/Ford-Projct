@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <title>AVD Request Page</title>
+    <link rel="stylesheet" href="static/form_v2_style.css">
+</head>
+<body>
+    <div class = "page">
+        <div>
+            <h1 id = "title">AVD Request Page</h1>
+        </div>
+        <div>
+            <h2 id = "sign-in">Authentication</h2>
+            <div>
+                <form action="/request-clarification" method = "post">
+                    <ul class = "user-intel">
+                        <li id = "name">
+                            <input type = "text" placeholder="Type your full name." name = "full-name">
+                        </li>
+                        <li id = "cdsid">
+                            <input type = "text" placeholder="Type your CDSID." name = "cdsid">
+                        </li>
+                        <li id = "request">
+                            <input type = "text" placeholder="Type the Request name." name = "request">
+                        </li>
+                        <li>
+                            <input id = "submit" type = "submit" value = "Submit">
+                        </li>
+                    </ul>
+                </form>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <script src = "static/page_control.js"></script>
+</body>
+</html>

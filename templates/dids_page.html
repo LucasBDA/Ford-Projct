@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciamento de DIDs</title>
+    <!-- Considerando que pode haver estilos e scripts adicionais necessários -->
+</head>
+<body>
+    <h1>Gerenciamento de DIDs</h1>
+    
+    <!-- Listagem de DIDs com opções para Editar e Remover -->
+    <table>
+        <thead>
+            <tr>
+                <th>DID</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Exemplo de como DIDs podem ser listados. Na prática, isso seria gerado dinamicamente. -->
+            <!--
+            <tr>
+                <td>did:exemplo:123</td>
+                <td>
+                    <button onclick="editarDID('did:exemplo:123')">Editar</button>
+                    <button onclick="removerDID('did:exemplo:123')">Remover</button>
+                </td>
+            </tr>
+            -->
+        </tbody>
+    </table>
+    
+    <!-- Formulário de Adição de DID -->
+    <form action="/submit_page6" method="POST">
+        <label for="newDID">Inserir novo DID:</label>
+        <input type="text" id="newDID" name="newDID">
+        <input type="submit" value="Adicionar DID">
+    </form>
+    
+    <!-- Botão de Finalização -->
+    <form action="/concluir_solicitacao" method="POST">
+        <input type="submit" value="Concluir Solicitação">
+    </form>
+    
+    <!-- Scripts para funcionalidades de Editar e Remover -->
+    <script>
+        function editarDID(did) {
+            // Implemente a lógica para editar um DID
+        }
+        
+        function removerDID(did) {
+            // Implemente a lógica para remover um DID
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/vehicle_style.css">
+  <title>AVD Request Page</title>
+</head>
+<body>
+  <div class = "main">
+    <div class = "header-content">
+      <div class = "title">
+        <ul>
+          <li><img id = "image" src = "static/ford_logo.jpg"></li>
+          <li><h1>AVD Request Page</h1></li>
+        </ul>
+      </div>
+      <div class = "subtitle">
+        <h1>Vehicle Specification Form</h1>
+      </div>
+      <div class = "user-informations">
+        <ul>
+          <li>
+            <p class = "identifier">Name:</p>
+          </li>
+          <li>
+            <p class = "data">{{nome}}</p>
+          </li>
+          <li>
+            <p class = "identifier">CDSID:</p>
+          </li>
+          <li>
+            <p class = "data">{{cdsid}}</p>
+          </li>
+          <li>
+            <p class = "identifier">Request Name:</p>
+          </li>
+          <li>
+            <p class = "data">{{request}}</p>
+          </li>
+        </ul>      
+      </div>
+    </div>
+    <div class = "main-content">
+      <div class = "drop-down">
+        <form action="/data-requirements" method = "post">
+          <ul>
+            <li>
+              <img id = "ford-logo-img" src = "/static/ford_logo_3.png">
+            </li>
+            <li>
+              <h3>VIN</h3>
+              <input type = "checkbox" id = "vin-yes" name = "vin-yes">
+              <label for="vin-yes">Yes</label><br>
+              <input type = "checkbox" id = "vin-no" name = "vin-no">
+              <label for="vin-no">No</label><br>
+            </li>
+            <li id = "tags">
+              <h3>VIN Number</h3>
+              <input type = "text" id = "tags-input" placeholder="Type the VIN Number">
+            </li>
+            <li id = "vin-list-li">
+              <h3>VIN List</h3>
+              <select id = "vin-list" name = "vin-list">
+                <option value = "opt">Select one</option>
+                <option value = "opt2">Provided by the requestor</option>
+                <option value = "opt3">Operations team to collect VINs</option>
+              </select>
+            </li>
+            <li id = "model-li">
+              <h3>Model</h3>
+              <select id = "model" name = "model">
+                <option value = "opt">Select one</option>
+              </select>
+            </li>
+ 
+            
+            <li id = "feature-codes">
+              <h3>Feature Codes</h3>
+              <input type = "checkbox" id = "privacy-training-yes" name = "privacy-training-yes">
+              <label for="privacy-training-yes">Yes</label><br>
+              <input type = "checkbox" id = "privacy-training-no" name = "privacy-training-no">
+              <label for="privacy-training-no">No</label><br>
+              </select>
+            </li>
+            <!--
+            <li>
+              <h3>GDPR Training</h3>
+              <input type = "checkbox" id = "gdrp-training-yes" name = "gdrp-training-yes">
+              <label for="gdrp-training-yes">Yes</label><br>
+              <input type = "checkbox" id = "gdrp-training-no" name = "gdrp-training-no">
+              <label for="gdrp-training-no">No</label><br>
+            </li>
+            <li>
+              <h3>Ford Internal use</h3>
+              <input type = "checkbox" id = "ford-internal-use-yes" name = "ford-internal-use-yes">
+              <label for="ford-internal-use-yes">Yes</label><br>
+              <input type = "checkbox" id = "ford-internal-use-no" name = "ford-internal-use-no">
+              <label for="ford-internal-use-no">No</label><br>
+            </li>
+            <li>
+              <h2>Location</h2>
+            </li>
+            <li>
+              <h3 id = "region-population-h3">Region of Population</h3>
+              <input id = "region-population" type = "text" placeholder = "Enter the region from where the data is collected from." name = "region-population">            
+            </li>
+            <li>
+              <h3 id = "region-data-h3">Region where data will be used</h3>
+              <input id = "region-data" type = "text" placeholder = "Enter the region where the data collected will be used." name = "region-data">
+            </li>
+            <li>
+              <h3 id = "purpose-h3">Purpose of Data collection</h3>
+              <input id = "purpose" type = "text" placeholder="Enter the purpose of the data collection in this request." name = "purpose">
+            </li>
+            <li>
+              <input id = "submit" type = "submit" value = "">
+            </li>
+          -->
+          </ul>
+        </form>
+      </div>
+    </div>
+    
+    <div id = "pseudo-footer">
+      <div></div>
+      <p>
+          This new web application has been made for the AVD Request Checklist (xlsx) replacement.
+          <br>Please visit AVD/ADC service desk and raise a JIRA ticket through the link below for any concerns/queries/changes to existing requests.</br>
+      </p>
+      <a href="https://ford.atlassian.net/servicedesk/customer/portal/64">Access Service Desk</a>
+  </div>
+  </div>
+  <script src = "static/page_control_2.js"></script>
+</body>
+</html>

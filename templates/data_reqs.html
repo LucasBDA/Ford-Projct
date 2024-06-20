@@ -1,0 +1,58 @@
+<!-- data_collection file -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Métodos de Coleta de Dados</title>
+    <!-- Incluindo jQuery UI para o calendário -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( "#start_date" ).datepicker();
+        $( "#end_date" ).datepicker();
+    } );
+    </script>
+</head>
+<body>
+    <h1>Métodos de Coleta de Dados</h1>
+    <form action="/submit_page3" method="post">
+        <label for="start_date">Data de Início:</label><br>
+        <input type="text" id="start_date" name="start_date" required><br>
+        <label for="end_date">Data de Fim:</label><br>
+        <input type="text" id="end_date" name="end_date" required><br>
+        
+        <p>Fontes de Dados:</p>
+        <input type="checkbox" id="internal" name="data_source" value="Internas">
+        <label for="internal">Internas</label><br>
+        <input type="checkbox" id="external" name="data_source" value="Externas">
+        <label for="external">Externas</label><br>
+        <input type="checkbox" id="partners" name="data_source" value="Parceiros">
+        <label for="partners">Parceiros</label><br>
+        
+        <label for="collection_goal">Objetivo da Coleta:</label><br>
+        <input type="text" id="collection_goal" name="collection_goal" required><br>
+        
+        <input type="submit" value="Próxima página">
+    </form>
+    <script>
+      $(document).ready(function(){
+          // Supondo que você tenha um campo extra que só aparece quando 'Parceiros' é selecionado
+          $('#partners').change(function(){
+              if(this.checked) {
+                  $('#extra_field').show();
+              } else {
+                  $('#extra_field').hide();
+              }
+          });
+      });
+      </script>
+      <div id="extra_field" style="display: none;">
+        <label for="extra_info">Informação adicional sobre Parceiros:</label><br>
+        <input type="text" id="extra_info" name="extra_info"><br>
+    </div>
+    
+</body>
+</html>
