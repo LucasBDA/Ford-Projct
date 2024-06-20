@@ -1,0 +1,508 @@
+.varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo-div{
+  background-image: url("/static/black_banner.jpg");
+  background-size: cover;
+}
+
+#blue-line{
+  /*background: linear-gradient(to right, #3498db, #3498db, #3498db00);*/
+  background-color: #3498db;
+  width: 100%;
+  height: 3px;
+}
+
+#white-line{
+  /*background: linear-gradient(to right, #ffffff, #ffffff, #ffffff00);*/
+  background-color: white;
+  width: 100%;
+  height: 3px;
+  margin-top: -30px;
+}
+
+/*
+#blue-line{
+  background: linear-gradient(to bottom, #3498db, #54516580, #83829f00);
+  width: 100%;
+  height: 30px;
+  margin-top: -17px;
+}
+*/
+p, h2, h3{
+  font-family: "Varela Round";
+}
+
+input[type = "checkbox"]{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+}
+
+select:not(.model-select, .year-select, .make-select, .modelSeries-select){
+  font-family: "Questrial";
+  padding: 10px;
+  border-radius: 10px;
+}
+
+label{
+  font-family: "Questrial";
+}
+
+body input, textarea{
+  border-radius: 30px;
+  border-style: none;
+  font-family: "Varela Round";
+  padding: 15px;
+}
+
+.big-text-areas{
+  height: 62px;
+}
+
+#title {
+  font-family: 'Questrial';
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.page{
+  z-index: 2;
+  margin: 0;
+  padding: 20px; 
+  
+}
+
+#page-content{
+  background-color: pink;
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 0px;
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(240, 247, 248));
+  background-size: cover;
+  border-style: solid;
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px rgba(78, 86, 60, 0.3);
+  padding: 20px;
+  width: 80%;
+  z-index: 3;
+}
+
+#page-footer{
+  margin-top: 50px;
+  padding: 20px;
+  height: fit-content;
+  align-items: center;
+  background-color: #252435;
+  border-radius: 30px;
+}
+
+#page-footer p{
+  color: white;
+}
+
+#page-footer a{
+  color: rgb(165, 167, 202);
+}
+
+body, head{
+  padding: 0;
+  margin: 0;
+  background-image: url("/static/ford-bg-7.jpg");
+  background-size: cover;
+  /*background-position: 0px 100px;*/
+}
+
+.big-text-areas{
+  width: 70%;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+}
+
+#ford-logo{
+  width: 120px;
+  height: 60px;
+}
+
+#fleet-vehicle-li{
+  display: none;
+}
+
+#vin-list-li{
+  display: none;
+}
+
+ul li{
+  list-style: none;
+}
+
+#Items{
+  margin-left: 0px;
+  padding: 10px;
+}
+
+#team-name{
+  width: 70%;
+}
+
+#vehicle-number-li{
+  display: none;
+}
+
+#userIntel{
+  display: grid;
+  margin-top: -20px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0; 
+  gap: 10px;
+}
+
+#userIntel li{
+  margin-left: 10%;
+}
+
+#tags{
+  display: none;
+}
+
+#tags input{
+  padding: 2px;
+  width: 300px;
+  height: 30px;
+  border-radius: 30px;
+  border-style: none;
+  text-align: center;
+}
+
+.done {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  transform-origin: top left;
+  vertical-align: middle;
+}
+
+a{
+  font-family: "Questrial";
+}
+
+.done-text {
+  font-family: "Questrial";
+  vertical-align: middle;
+  margin-left: 1px; 
+}
+
+.done-class-li{
+  margin-top: 30px;
+}
+/*
+#request-clarification{
+  color: #999999;
+}
+
+#vehicle-specification{
+  color: #999999;
+}
+
+#data-requirements{
+  color: #999999;
+}
+
+#data-delivery{
+  color:#999999;
+}
+*/
+
+#vehicle-container{
+  display: flex;
+  margin-top: 10px;
+  column-gap: 0px;
+  width: min-content;
+  padding-left: 20px;
+  padding-right: 3px;
+  border-radius: 30px;
+}
+
+.model-ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.model-select{
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.year-select{
+  margin-left: -11px;
+}
+
+.make-select{
+  margin-left: -22px;
+}
+
+.modelSeries-select{
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-left: -33px;
+}
+
+#yearH3-id{
+  margin-left: -44px;
+}
+
+#makeH3-id{
+  margin-left: -55px;
+}
+
+#modelSeriesH3-id{
+  margin-left: -66px;
+}
+
+.model-ul h3{
+  text-align: center;
+}
+
+.cascate-list{
+  justify-content: center;
+}
+
+#popup{
+  display: none;
+  color: red;
+}
+
+#data-ul li input[type = "text"]{
+  width: 70%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.data-subtitle{
+  font-weight: bold;
+}
+
+.triggerCAN-div ul{
+  display: flex;
+  align-items: center;
+}
+
+.triggerCAN-div ul li textarea{
+  width: 500px;
+  margin-left: 5px;
+}
+
+.triggerCAN-div{
+  margin-top: 20px;
+  margin-left: -50px;
+}
+
+.triggerCAN-div ul li{
+  margin-right: 20px;
+} 
+
+.comparator-id{
+  border: none;
+}
+
+.triggerDID-div{
+  margin-top: 20px;
+  margin-left: -10px;
+}
+
+.triggerDID-div ul{
+  display: flex;
+  margin-top: 30px;
+  /*grid-template-columns: repeat(1, 1fr);
+  padding: 0; 
+  gap: 10px;*/
+  align-items: center;
+
+}
+
+.triggerDID-div ul li textarea{
+  width: 500px;
+  margin-left: -30px;
+}
+
+#triggers-buttons{
+  display: none;
+  margin-left: -40px;
+}
+
+#triggers-buttons li h2{
+  background-color: rgb(182, 177, 171);
+  border-radius: 30px;
+  text-align: center;
+  width: 30px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: .5s;
+}
+
+#triggers-buttons li h2:hover{
+  background-color: #3498db;
+}
+
+.triggerCAN-div{
+  display: none;
+}
+
+.triggerDID-div{
+  display: none;
+}
+
+#advice{
+  display: none;
+  margin-bottom: -10px;
+}
+
+#gcp-no{
+  margin-bottom: 50px;
+}
+
+#dataDelivery li input[type = "text"]{
+  width: 70%;
+}
+
+/*ANIMAÇÃO DO DROPDOWN*/
+
+
+.arrow-img{
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  margin-bottom: -2px;
+}
+
+.left-icon,
+.right-icon{
+  position: relative;
+  display: inline-block;
+  font-family: "Varela Round";
+  font-size: 40px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.subtitles{
+  font-family: "Varela Round";
+  margin: 0;
+  position: relative;
+  z-index: 3;
+  color: white;
+  background: linear-gradient(to right, #252435, #54516580, #83829f00);
+  border-radius: 20px;
+}
+
+.dropdown-content{
+  padding: 10px;
+}
+
+.left-icon{
+  left: 17px;
+  transform: rotate(45deg);
+}
+
+.right-icon{
+  transform: rotate(-45deg);
+}
+
+.dropdown-header.active .left-icon{
+  transform: rotate(135deg)
+}
+
+.dropdown-header.active .right-icon{
+  transform: rotate(-135deg)
+}
+
+.dropdown-header .dropdown-content{ /*<div> fantasma antes da animação de dropdown*/
+  height: 0px;
+  transition: 1s;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: relative;
+  margin-top: -18px;
+  z-index: 1;
+  border-radius: 30px;
+}
+
+
+.dropdown-header.active .dropdown-content{
+  margin-top: 0px;
+}
+
+#blank-space{
+  height: 20px;
+}
+
+#authentication_div p{
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/*Botão de Submit*/
+#submit {
+  display: none;
+  margin-top: 10px;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: white;
+  background-color: #3498db;
+  border: none;
+  cursor: pointer;
+}
+
+
+#ford-warning {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  margin-top: 20px;
+  margin-left: -30px;
+}
+
+#ford-warning-li{
+  align-items: center;
+  text-align: center;
+}
+
+#vehicle-container{
+  background-color: #252435;
+}
+
+#vehicle-container h3{
+  color: white;
+}
+
+#vehicle-container select{
+  font-family: "Questrial";
+}  
+
+.requestor-class input{
+  box-shadow: 5px 5px 10px rgba(168, 188, 59, 0.3);
+}
+
+@keyframes tremor {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-1px, 1px); }
+  50% { transform: translate(1px, -1px); }
+  75% { transform: translate(-1px, -1px); }
+  100% { transform: translate(1px, 1px); }
+}
+
+.tremor {
+  animation: tremor 0.5s;
+}

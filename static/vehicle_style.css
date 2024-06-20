@@ -1,0 +1,247 @@
+.varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.title{
+  margin-top: -20px;
+  background-image: url("/static/black_banner.jpg");
+  background-size: cover;
+  height: 100px;
+}
+
+.user-informations ul{
+  flex: 1;
+  flex-direction: row;
+  display: flex;
+  list-style: none;
+}
+
+body, head{
+  margin: 0px;
+}
+
+.user-informations ul il{
+  margin-right: 15px;
+}
+
+.title ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+#image{
+  width: 110px;
+  height: 50px;
+  padding: 28px;
+  margin-top: -2px;
+  margin-left: -50px;
+}
+
+.title h1{
+  font-family: 'Questrial';
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.subtitle{
+  background-color: rgb(23, 62, 109);
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.subtitle h1{
+  font-family: 'Questrial';
+  font-size: 40px;
+  margin-left: 20px;
+  color: white;
+}
+
+.user-informations{
+  background-color: rgb(23, 62, 109);
+  width: fit-content;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom-right-radius: 30px;
+}
+
+.user-informations p{
+  font-family: 'Varela Round';
+  margin-left: -20px;
+  color: white;
+}
+
+.user-informations ul li{
+  margin-right: 30px;
+}
+
+.identifier{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.data{
+  font-size: 15px;
+  margin-top: 21px;
+}
+/*
+.main{
+  height: 1000px;
+  background-image: url("/static/ford_bg_3.jpg");
+  background-size: cover;
+}
+*/
+
+.main{
+  background-image: url("/static/ford_bg_3.jpg");
+  background-size: auto;
+}
+
+.drop-down{
+  border-width: 0px;
+  background-image: linear-gradient(to bottom right, white, rgb(226, 234, 235));
+  background-size: cover;
+  border-style: solid;
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 50%;
+  margin-top: 15px;
+  /*Centraliza a div no meio da página*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.drop-down ul li{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  list-style: none;
+  margin-top: 10px;
+  font-family: 'Varela Round';
+}
+
+.drop-down ul li h3{
+  text-align: center;
+  align-items: center;
+  margin-top: 3px;
+  margin-right: 10px;
+}
+
+.drop-down ul li input[type="text"]{
+  width: 350px;
+  height: 50px;
+  padding: 5px 10px;
+  font-size: 12px;
+  text-align: center;
+  font-family: 'Varela Round';
+  border-radius: 10px;
+  border-width: 0px;
+  border-color: rgb(158, 158, 158);
+}
+
+.drop-down ul li input[type="date"]{
+  font-family: 'Varela Round';
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: rgb(158, 158, 158);
+  padding: 15px;
+  cursor: pointer;
+}
+
+.drop-down ul li input[type="checkbox"]{
+  margin-top: -10px;
+  font-family: 'Varela Round';
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.drop-down ul li label{
+  margin-top: 5px;
+  margin-right: 10px;
+  font-family: 'Varela Round';
+  border-radius: 10px;
+}
+
+.drop-down ul li select{
+  width: 130px;
+  height: 30px;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px 10px;
+  font-family: 'Varela Round';
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: rgb(158, 158, 158);
+  cursor: pointer;
+}
+
+#popup{
+  display: none;
+}
+
+#popup p{
+  color: red;
+  font-family: 'Varela Round';
+  text-align: center;
+  margin-top: -15px;
+}
+
+#ford-logo-img{
+  width: 100px;
+  height: 30px;
+  margin-bottom: 40px;
+}
+
+
+#vin-list-li{
+  display: none
+}
+
+#model-li{
+  display: none
+}
+
+#submit:hover{
+  transform: scale(1.1);
+}
+
+#pseudo-footer{
+  background-color: black;
+  height: 150px;
+  margin-top: 30px;
+}
+
+#pseudo-footer div{
+  height: 20px;
+}
+
+#pseudo-footer p{
+  font-family: "Agency FB";
+  font-size: 20px;
+  margin-left: 15px;
+  margin-bottom: 0px;
+  color: white;
+}
+
+#pseudo-footer a{
+  color: black;
+  font-family: "Agency FB";
+  font-size: 18px;
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 1s;
+}
+
+#pseudo-footer a:hover{
+  color: rgb(127, 127, 60);
+}
